@@ -49,61 +49,50 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I learned that bun can build a static site, but you need to have a `.ts` file present for 
+it to work cleanly. It also flattens the directory structure. Better to use it with Vite.
 
-To see how you can add code snippets, see below:
+Slightly more challenging to keep the `html` semantic.
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<article class="ref ref-daniel">
+  <header class="byline">
+    <img src="images/image-daniel.jpg" alt="Daniel Clifford" width="56" height="56">
+    <address>
+      <h1>Daniel Clifford</h1>
+      <!-- ... Other markup  -->
 ```
+
+Getting the quote `svg` to sit in only one card in the top right hand corner, and behind the paragraph
+involved some experimentation with positioning and z-index.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.ref {
+    position: relative;
+    /* Other styles */
+}
+
+.quote {
+    position: absolute;
+    /* Other styles */
+}
+
+
+.blurb {
+    position: relative;
+    z-index: 10;
+    /* Other styles */
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+- The `.ref` class is the container class for the testimonial (aka. reference).
+- The `.quote` is the class on the `svg` image of the quotation mark.
+- the `.blurb` class is on the top paragraph of the testimonial, and brings the paragraph forward above the image.
 
 ### AI Collaboration
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
-
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
-
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+I only made use of AI in the browser for finding and confirming techniques. 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**

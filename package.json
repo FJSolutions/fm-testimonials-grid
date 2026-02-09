@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "bun ./index.html",
-    "css": "lightningcss ./src/styles/main.css -o ./styles/main.css",
+    "css": "lightningcss ./src/styles/main.css -o ./styles/main.css --targets \">= 0.25%, last 2 versions\" ",
     "build": "bun build ./index.html --production --target=browser --outdir=./docs",
     "preview": "bun ./docs/index.html --port=4321"
   },
