@@ -18,13 +18,135 @@
 }
 
 body {
+  background-color: var(--grey-100);
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  font-family: Barlow Semi Condensed, sans-serif;
+  font-weight: normal;
   display: flex;
 }
 
 main {
-  grid-template-areas: "" "" "" ""
-            "" "" "" "";
+  gap: 1em;
+  max-width: 65em;
+  margin: 2.5em 1.8em;
   display: grid;
+
+  & .ref {
+    background-color: var(--white);
+    width: 100%;
+    box-shadow: 3em 3em 2em var(--grey-200);
+    border-radius: .6em;
+    margin: 1rem 0;
+    padding: 2.2em 1.8em;
+    position: relative;
+
+    & header {
+      align-items: center;
+      gap: .5em;
+      margin-block-end: 1em;
+      display: flex;
+
+      & img {
+        border-radius: 50%;
+        width: 2em;
+        height: 2em;
+        margin-right: .6em;
+      }
+
+      & h1 {
+        font-size: .9rem;
+        font-weight: bolder;
+      }
+
+      & p {
+        font-size: .75rem;
+        font-weight: normal;
+      }
+
+      & .quote {
+        border-radius: 0;
+        width: 6.5em;
+        height: 6.5em;
+        position: absolute;
+        top: .1em;
+        right: 3em;
+      }
+    }
+
+    & .blurb {
+      z-index: 10;
+      margin-block-end: 1rem;
+      font-size: 1.2em;
+      font-weight: 500;
+      position: relative;
+    }
+
+    & .pull-quote {
+      font-size: .85rem;
+      font-weight: 400;
+    }
+  }
+
+  & .ref-daniel {
+    background-color: var(--purple-500);
+    color: var(--white);
+    grid-area: daniel;
+
+    & header img:first-child {
+      border: solid .1rem var(--purple-300);
+    }
+  }
+
+  & .ref-johnathan {
+    background-color: var(--grey-500);
+    color: var(--grey-100);
+    grid-area: johnathan;
+  }
+
+  & .ref-jeanette {
+    background-color: var(--white);
+    color: var(--grey-500);
+    grid-area: jeanette;
+  }
+
+  & .ref-patrick {
+    background-color: var(--dark-blue);
+    color: var(--grey-100);
+    grid-area: patrick;
+
+    & header img {
+      border: solid .1rem var(--purple-500);
+    }
+  }
+
+  & .ref-kira {
+    background-color: var(--white);
+    color: var(--grey-400);
+    grid-area: kira;
+  }
+}
+
+@media screen and (width <= 430px) {
+  main {
+    grid-template-areas: "daniel"
+                         "johnathan"
+                         "jeanette"
+                         "patrick"
+                         "kira";
+  }
+}
+
+@media screen and (width >= 431px) {
+  main {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "daniel daniel johnathan kira"
+                         "jeanette patrick patrick kira";
+
+    & .ref {
+      margin: 0;
+    }
+  }
 }

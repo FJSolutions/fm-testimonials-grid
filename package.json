@@ -1,10 +1,13 @@
 {
   "name": "testimonials-grid-section-main",
   "type": "module",
+  "main": "./index.ts",
   "private": true,
   "scripts": {
     "dev": "bun ./index.html",
-    "css": "lightningcss ./src/styles/main.css -o ./styles/main.css"
+    "css": "lightningcss ./src/styles/main.css -o ./styles/main.css",
+    "build": "bun build ./index.html --production --target=browser --outdir=./docs",
+    "preview": "bun ./docs/index.html --port=4321"
   },
   "devDependencies": {
     "lightningcss": "^1.31.1",
