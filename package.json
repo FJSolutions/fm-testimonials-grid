@@ -1,12 +1,17 @@
 {
   "name": "testimonials-grid-section-main",
-  "module": "index.ts",
   "type": "module",
   "private": true,
+  "scripts": {
+    "dev": "bun ./index.html",
+    "css": "lightningcss ./src/styles/main.css -o ./styles/main.css"
+  },
   "devDependencies": {
-    "@types/bun": "latest"
+    "lightningcss": "^1.31.1",
+    "lightningcss-cli": "^1.31.1"
   },
   "peerDependencies": {
     "typescript": "^5"
-  }
+  },
+  "dependencies": {}
 }

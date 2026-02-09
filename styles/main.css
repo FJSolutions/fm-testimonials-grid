@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --purple-50: #eee6ff;
+  --purple-300: #c4a2f6;
+  --purple-500: #7541c8;
+  --white: #fff;
+  --grey-100: #e7eaee;
+  --grey-200: #cfcfcf;
+  --grey-400: #676d7e;
+  --grey-500: #48556a;
+  --dark-blue: #19212e;
+  --black: #121212;
+}
+
+body {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+main {
+  grid-template-areas: "" "" "" ""
+            "" "" "" "";
+  display: grid;
+}
